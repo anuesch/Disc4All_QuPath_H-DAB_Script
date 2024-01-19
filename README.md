@@ -28,7 +28,7 @@ resetSelection();
 
 we then create with the TissueDetetion thresholder the regions
 ```
-createAnnotationsFromPixelClassifier(...)
+createAnnotationsFromPixelClassifier("TissueDetection", 1.0E6, 1.0E6, "SPLIT", "DELETE_EXISTING", "SELECT_NEW")
 ```
 
 we then select all the regions
