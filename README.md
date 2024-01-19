@@ -1,6 +1,8 @@
 # Disc4All_QuPath
 
-**This script is an easy forward script for the us of immunohitochemically stained slides.**
+**This script is an easy forward script for the use of immunohitochemically stained slides.**
+
+This script is part of a [H-DAB immunopositivity tutorial](https://app.gitbook.com/o/kAkxf5RLoV6dm2APAW3P/s/SleK316zl0BYwa7DfK2J/~/changes/9/qupath-h-dab-docs/qupath-script) for low cellular tissue.  
 
 The first part of the script is importing the needed library, getting the project and setting it to H-DAB
   
@@ -15,54 +17,56 @@ setImageType('BRIGHTFIELD_H_DAB');
 
 ```
 
-the next part need to be adjusted for each batch, it sets the stain values. 
-*replace this line with your own code line generated*
+The next part need to be adjusted for each batch, it sets the stain values. 
+*Replace this line with your own code line generated!*
 ```
 setColorDeconvolutionStains('{"Name" : "H-DAB estimated", "Stain 1" : "Hematoxylin", "Values 1" : "0.73481 0.63078 0.24935", "Stain 2" : "DAB", "Values 2" : "0.27519 0.51569 0.81138", "Background" : " 255 255 255"}');
 ```
   
-fo the automatic tissue detection we first reset the selection
+For the automatic tissue detection we first reset the selection.
 ```
 resetSelection();
 ```
 
-we then create with the TissueDetetion thresholder the regions
+Create the "Regions" with the TissueDetection threshold. 
 ```
 createAnnotationsFromPixelClassifier("TissueDetection", 1.0E6, 1.0E6, "SPLIT", "DELETE_EXISTING", "SELECT_NEW")
 ```
 
-we then select all the regions
+Select all the regions.
 ```
 selectObjectsByClassification("Region")
 ```
 
-And remove the edges as those are often stained more intense
+And remove the edges as those are often stained more intense.
 ```
 runPlugin('qupath.lib.plugins.objects.DilateAnnotationPlugin', '{"radiusMicrons":-100.0,"lineCap":"ROUND","removeInterior":false,"constrainToParent":true}')
 ```
-then we delete the original annotation
+The original annotation gets then deleted to only exclude the edges of the tissue. 
 ```
 clearSelectedObjects()
 ```
 
-select all remainin annotations which will be tartgeted for cell detection, also if we perform specific region detection manually we use this
+The remaining annotations will be tartgeted for cell detection.
+If specific region detection was performed manually this line is used too. 
 ```
 selectAnnotations()
 ```
 
-We then run cell detection specifically for the project (change values)
+Cell detection is then run specific for the project. 
+*Values should be adjusted project specific*
 
 ```
 runPlugin('qupath.imagej.detect.cells.WatershedCellDetection',       '{...}')
 ```
 
-Afterwards the detected cells will be classified by the trained object classifier
+Afterwards the detected cells will be classified by the trained object classifier.
 
 ```
 runObjectClassifier("ObjectClassifier")
 ```
 
-and the measurements will be saved to the directory called results within the project folder
+The measurements will be saved to the directory called Results within the project folder
 ```
 def entry = getProjectEntry()
 def name = entry.getImageName() + '.txt'
