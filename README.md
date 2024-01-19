@@ -1,17 +1,17 @@
 # Disc4All_QuPath
 
-This script is an easy forward script for the us of immunohitochemically stained slides. 
+**This script is an easy forward script for the us of immunohitochemically stained slides. **
 
 The first part of the script is importing the needed library, getting the project and setting it to H-DAB
   
-  import static qupath.lib.gui.scripting.QPEx.*
+`import static qupath.lib.gui.scripting.QPEx.* 
 
   def project = getProject()
   for (entry in project.getImageList()) {
       ...
   }
 
-  setImageType('BRIGHTFIELD_H_DAB');
+  setImageType('BRIGHTFIELD_H_DAB');` 
 
 the next part need to be adjusted for each batch, it sets the stain values. 
   
