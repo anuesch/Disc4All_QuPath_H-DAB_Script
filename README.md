@@ -57,7 +57,7 @@ Cell detection is then run specific for the project.
 *Values should be adjusted project specific*
 
 ```
-runPlugin('qupath.imagej.detect.cells.WatershedCellDetection',       '{...}')
+runPlugin('qupath.imagej.detect.cells.WatershedCellDetection', '{"detectionImageBrightfield":"Optical density sum","requestedPixelSizeMicrons":1.0,"backgroundRadiusMicrons":8.0,"backgroundByReconstruction":true,"medianRadiusMicrons":0.0,"sigmaMicrons":1.5,"minAreaMicrons":20.0,"maxAreaMicrons":400.0,"threshold":0.2,"maxBackground":0.25,"watershedPostProcess":true,"excludeDAB":false,"cellExpansionMicrons":5.0,"includeNuclei":true,"smoothBoundaries":true,"makeMeasurements":true}')
 ```
 
 Afterwards the detected cells will be classified by the trained object classifier.
