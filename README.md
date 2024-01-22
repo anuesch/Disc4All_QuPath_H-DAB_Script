@@ -18,7 +18,8 @@ setImageType('BRIGHTFIELD_H_DAB');
 ```
 
 The next part need to be adjusted for each batch, it sets the stain values. 
-*Replace this line with your own code line generated!*
+
+***Replace this line with your own code line generated!***
 ```
 setColorDeconvolutionStains('{"Name" : "H-DAB estimated", "Stain 1" : "Hematoxylin", "Values 1" : "0.73481 0.63078 0.24935", "Stain 2" : "DAB", "Values 2" : "0.27519 0.51569 0.81138", "Background" : " 255 255 255"}');
 ```
@@ -54,7 +55,7 @@ selectAnnotations()
 ```
 
 Cell detection is then run specific for the project. 
-*Values should be adjusted project specific*
+***Values should be adjusted project specific***
 
 ```
 runPlugin('qupath.imagej.detect.cells.WatershedCellDetection', '{"detectionImageBrightfield":"Optical density sum","requestedPixelSizeMicrons":1.0,"backgroundRadiusMicrons":8.0,"backgroundByReconstruction":true,"medianRadiusMicrons":0.0,"sigmaMicrons":1.5,"minAreaMicrons":20.0,"maxAreaMicrons":400.0,"threshold":0.2,"maxBackground":0.25,"watershedPostProcess":true,"excludeDAB":false,"cellExpansionMicrons":5.0,"includeNuclei":true,"smoothBoundaries":true,"makeMeasurements":true}')
