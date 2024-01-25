@@ -4,9 +4,7 @@
 
 This script is part of a [H-DAB immunopositivity tutorial](https://app.gitbook.com/o/kAkxf5RLoV6dm2APAW3P/s/SleK316zl0BYwa7DfK2J/~/changes/9/qupath-h-dab-docs/qupath-script) for low cellular tissue.  
 
-The README File which you are currently on is the file explaining the different steps of the script. 
-
-The script to run in QuPath can found on your left hand side downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` showing you which lines need replacing. 
+The README File which you are currently on is the file explaining the different steps of the script. There is no need to copy over the codelines, the script to run in QuPath can found on your left hand side downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` showing you which lines need replacing they do not affect the script as they are `//ignored`.  
 
 
 The first part of the script is importing the needed library, getting the project and setting it to H-DAB
