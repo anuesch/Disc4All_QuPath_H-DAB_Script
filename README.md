@@ -22,7 +22,7 @@ setImageType('BRIGHTFIELD_H_DAB');
 
 The next part need to be adjusted for each batch, it sets the stain values. 
 
-***Replace this line with your own code line generated!***
+***Replace this line with your own script line generated!***
 ```
 setColorDeconvolutionStains('{"Name" : "H-DAB estimated", "Stain 1" : "Hematoxylin", "Values 1" : "0.73481 0.63078 0.24935", "Stain 2" : "DAB", "Values 2" : "0.27519 0.51569 0.81138", "Background" : " 255 255 255"}');
 ```
