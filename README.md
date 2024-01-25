@@ -5,7 +5,8 @@
 This script is part of a [H-DAB immunopositivity tutorial](https://app.gitbook.com/o/kAkxf5RLoV6dm2APAW3P/s/SleK316zl0BYwa7DfK2J/~/changes/9/qupath-h-dab-docs/qupath-script) for low cellular tissue.  
 
 The README File which you are currently on is the file explaining the different steps of the script. 
-The script can be downloaded as .groovy file and the changes needed can be directly made in there. 
+The script can be downloaded as QuPath_HDAB_Batchprocessing.groovy file and the changes needed can be directly made in there. It will tell you within the script too which lines need replacing. 
+I suggest you download the groovy file, open it in the script editor in QuPath and follow the README file for the changes and the understanding. 
 
 The first part of the script is importing the needed library, getting the project and setting it to H-DAB
   
