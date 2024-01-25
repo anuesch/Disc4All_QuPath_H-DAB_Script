@@ -4,6 +4,9 @@
 
 This script is part of a [H-DAB immunopositivity tutorial](https://app.gitbook.com/o/kAkxf5RLoV6dm2APAW3P/s/SleK316zl0BYwa7DfK2J/~/changes/9/qupath-h-dab-docs/qupath-script) for low cellular tissue.  
 
+The READMe File which you are currently on is the file explaining the different steps of the script. 
+The script can be downloaded as .groovy file and the changes needed can be directly made in there. 
+
 The first part of the script is importing the needed library, getting the project and setting it to H-DAB
   
 ```
@@ -23,7 +26,7 @@ The next part need to be adjusted for each batch, it sets the stain values.
 ```
 setColorDeconvolutionStains('{"Name" : "H-DAB estimated", "Stain 1" : "Hematoxylin", "Values 1" : "0.73481 0.63078 0.24935", "Stain 2" : "DAB", "Values 2" : "0.27519 0.51569 0.81138", "Background" : " 255 255 255"}');
 ```
-  
+If you have performed manual tissue detection, the next few code lines can be ignored.   
 For the automatic tissue detection we first reset the selection.
 ```
 resetSelection();
@@ -49,6 +52,7 @@ clearSelectedObjects()
 ```
 
 The remaining annotations will be tartgeted for cell detection.
+
 If specific region detection was performed manually this line is used too. 
 ```
 selectAnnotations()
