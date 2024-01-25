@@ -18,24 +18,18 @@ setColorDeconvolutionStains('{"Name" : "H-DAB estimated", "Stain 1" : "Hematoxyl
 
 //only includ in automatic tissue detection 
 /***********************/
-
 resetSelection();
 createAnnotationsFromPixelClassifier("TissueDetection", 1.0E6, 1.0E6, "SPLIT", "DELETE_EXISTING", "SELECT_NEW")
 selectObjectsByClassification("Region")
 runPlugin('qupath.lib.plugins.objects.DilateAnnotationPlugin', '{"radiusMicrons":-100.0,"lineCap":"ROUND","removeInterior":false,"constrainToParent":true}')
-
-
 clearSelectedObjects()  // Delete the original annotation
-
 /***********************/
 
 selectAnnotations()  // Select all remaining annotations, which will be the target for cell detection
 
-
 //replace this whit your own cell detection
 /----/
 runPlugin('qupath.imagej.detect.cells.WatershedCellDetection', '{"detectionImageBrightfield":"Optical density sum","requestedPixelSizeMicrons":1.0,"backgroundRadiusMicrons":8.0,"backgroundByReconstruction":true,"medianRadiusMicrons":0.0,"sigmaMicrons":1.5,"minAreaMicrons":20.0,"maxAreaMicrons":400.0,"threshold":0.2,"maxBackground":0.25,"watershedPostProcess":true,"excludeDAB":false,"cellExpansionMicrons":5.0,"includeNuclei":true,"smoothBoundaries":true,"makeMeasurements":true}')
-
 /----/
 
 runObjectClassifier("ObjectClassifier")
