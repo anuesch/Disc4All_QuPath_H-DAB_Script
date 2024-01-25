@@ -6,7 +6,7 @@ This script is part of a [H-DAB immunopositivity tutorial](https://app.gitbook.c
 
 The README File which you are currently on is the file explaining the different steps of the script. 
 
-The script to run in QuPath can be downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` showing you which lines need replacing. 
+The script to run in QuPath can found on your left hand side downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` showing you which lines need replacing. 
 
 
 The first part of the script is importing the needed library, getting the project and setting it to H-DAB
