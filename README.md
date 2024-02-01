@@ -2,7 +2,7 @@
 
 **This script is an easy forward script for the use of immunohitochemically stained slides.**
 
-This script is part of a [H-DAB immunopositivity tutorial](https://app.gitbook.com/o/kAkxf5RLoV6dm2APAW3P/s/SleK316zl0BYwa7DfK2J/~/changes/9/qupath-h-dab-docs/qupath-script) for low cellular tissue.  
+This script is part of a [H-DAB immunopositivity tutorial](https://disc4all-qupath.gitbook.io/qupath-project/) for low cellular tissue.  
 
 The README File which you are currently on is the file explaining the different steps of the script. There is no need to copy over the codelines, the script to run in QuPath can found on your left hand side downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` showing you between `//----//`which lines the code needs replacing. They do not affect the script as they are `//ignored`.  
 
