@@ -4,7 +4,7 @@
 
 This script is part of a [H-DAB immunopositivity tutorial](https://disc4all-qupath.gitbook.io/qupath-project/) for low cellular tissue.  
 
-The README File which you are currently on is the file explaining the different steps of the script. There is no need to copy over the codelines, the script to run in QuPath can found on your left hand side downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` showing you between `//----//`which lines the code needs replacing. They do not affect the script as they are `//ignored`.  
+The README File which you are currently on is the file explaining the different steps of the script. There is no need to copy over the codelines, the script to run in QuPath can found on your left hand side downloaded as .groovie file and opened through the script editor in QuPath. There are `//comments` that do not affect the script as they are `//ignored`.  
 
 
 The first part of the script is importing the needed library, getting the project, and setting it to H-DAB
@@ -38,9 +38,9 @@ Replace this with the name of your Objectclassifier
 ```
 runObjectClassifier("ObjectClassifier")
 ```
-**save
+***Saving the Results generated***
 
-
+```
 def entry = getProjectEntry()
 def name = entry.getImageName() + '.txt'
 def path = buildFilePath(PROJECT_BASE_DIR, 'Results')
@@ -48,7 +48,6 @@ mkdirs(path)
 path = buildFilePath(path, name)                             
 
 saveDetectionMeasurements(path)			
-
 
 println('Results exported to ' + path)
 ```
