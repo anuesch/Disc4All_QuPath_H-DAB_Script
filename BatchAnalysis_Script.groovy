@@ -4,7 +4,9 @@ def project = getProject()
 
 setImageType('BRIGHTFIELD_H_DAB');
 
-//Components can be added and removed project accordingly, in this example we have 4 components (NP,iAF,oAF and CEP)
+//Components can be added and removed project accordingly, in this example we have 4 components (NP,iAF,oAF and CEP),
+
+//if you ran the automatic tissue detection delete all except one components and replace it's values and name with Region
 
 //---------------------------------------------------------------------------------------------------------------//
 //Component1 = The name of your calssification for the tissue e.g. NP
