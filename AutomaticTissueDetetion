@@ -13,5 +13,6 @@ setColorDeconvolutionStains('{"Name" : "H-DAB estimated", "Stain 1" : "Hematoxyl
 resetSelection();
 createAnnotationsFromPixelClassifier("TissueDetection", 1.0E6, 1.0E6, "SPLIT", "DELETE_EXISTING", "SELECT_NEW")
 selectObjectsByClassification("Region")
+// removing the edge of the tissue to avoid edge effect
 runPlugin('qupath.lib.plugins.objects.DilateAnnotationPlugin', '{"radiusMicrons":-100.0,"lineCap":"ROUND","removeInterior":false,"constrainToParent":true}')
 clearSelectedObjects()  
